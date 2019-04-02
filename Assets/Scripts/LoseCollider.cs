@@ -6,6 +6,6 @@ public class LoseCollider : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        print("Lose");
+        FindObjectOfType<GameManager>().Lose();
     }
 }
