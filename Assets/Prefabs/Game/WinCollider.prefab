@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 292912223}
   - component: {fileID: 292912222}
   m_Layer: 0
-  m_Name: LoseCollider 1
+  m_Name: WinCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
