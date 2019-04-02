@@ -31,6 +31,11 @@ public class NinjaJump : MonoBehaviour
         xVelocityAtEnter = myRigidbody.velocity.x;
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        canJump = false;
+    }
+
     void Jump()
     {
         myRigidbody.velocity = new Vector3(jumpVector.x * -Mathf.Sign(xVelocityAtEnter), jumpVector.y, jumpVector.z);
