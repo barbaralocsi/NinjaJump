@@ -27,8 +27,12 @@ public class NinjaJump : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        canJump = true;
-        xVelocityAtEnter = myRigidbody.velocity.x;
+        // Jumping is only possible when the other is a wall (so its not an obstacle)
+        if (other.tag == "Wall")
+        {
+            canJump = true;
+            xVelocityAtEnter = myRigidbody.velocity.x;
+        }
     }
 
     private void OnTriggerExit(Collider other)
