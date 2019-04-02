@@ -37,7 +37,10 @@ public class NinjaJump : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        canJump = false;
+        if (other.tag == "Wall")
+        {
+            canJump = false;
+        }
     }
 
     void Jump()
