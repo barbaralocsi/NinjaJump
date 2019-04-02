@@ -6,6 +6,6 @@ public class WinCollider : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        print("Win");
+        FindObjectOfType<GameManager>().Win();
     }
 }

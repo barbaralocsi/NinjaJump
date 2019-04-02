@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject LosePanel;
+    [SerializeField] GameObject WinPanel;
 
     public void Lose()
     {
@@ -21,6 +22,13 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        Time.timeScale = 0;
+        WinPanel.SetActive(true);
+    }
 
+    public void NextScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
